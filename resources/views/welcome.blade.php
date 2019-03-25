@@ -5,10 +5,10 @@
 
 </div>
 <div class="row">
-    <div style = "width: 33%;font-size: 20px;">
+    <div style = "width: 32%;font-size: 20px; margin:-35px auto;">
         Data
         <div class="row" style="margin-right: 0px;margin-left: 0px;">
-            <div style="width: 50.9%;">
+            <div style="width: 49.9%;">
                 Inicio
             </div>
             <div style="padding-left: 53px;">
@@ -16,16 +16,16 @@
             </div>
         </div>
         <div class="row" style="margin-right: 0px;margin-left: 0px;">
-            <div style="width: 50.9%;">
-                <input style="font-size: smaller;width: 157px;" type="date" id="start" name="trip-start">
+            <div style="width: 49.9%;">
+                <input style="font-size: smaller;width: 157px;" class='form-control' type="date" id="start" name="trip-start">
             </div>
             <div>
-                <input style="font-size: smaller;width: 157px;" type="date" id="end" name="trip-start">
+                <input style="font-size: smaller;width: 157px;" class='form-control' type="date" id="end" name="trip-start">
             </div>
         </div>
     </div>
 
-    <div style = "width: 33%;font-size: 20px;">
+    <div style = "width: 32%;font-size: 20px;">
         Unidade
         <div class="form-group" style="padding-left: 15px;padding-right: 15px;">
             <select id="unidade" class="form-control" {{-- onchange="CriarQuery()"--}} >
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div style = "width: 33%;font-size: 20px;">
+    <div style = "width: 32%;font-size: 20px;">
         Especialização
         <div class="form-group" style="padding-left: 15px;padding-right: 15px;">
             <select id="especializacao" class="form-control" {{--onchange="CriarQuery()"--}} >
@@ -58,8 +58,8 @@
 
     {{-- <div id='resposta'></div> --}}
     
-    <div class="row">
-        <div style="width: 30%">
+    <div class="row" style='text-align:center;'>
+        <div style="width: 30%; margin:5px auto;">
             <canvas id="myChart" width="400" height="400"></canvas>
         </div>
     </div> 
@@ -113,7 +113,7 @@
     })
 </script>
 
-{{-- <div style="width: 350px">
+{{-- <div style="width: 350px;">
     <canvas id="myChart" width="400" height="400"></canvas>
 </div> --}}
 
