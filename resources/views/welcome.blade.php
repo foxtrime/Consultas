@@ -1,5 +1,5 @@
 @extends('layouts.material')
-
+ 
 @section('content')
 <div class="row" style="padding-top: 6%;">
 
@@ -28,7 +28,7 @@
     <div style = "width: 32%;font-size: 20px;">
         Unidade
         <div class="form-group" style="padding-left: 15px;padding-right: 15px;">
-            <select id="unidade" class="form-control" {{-- onchange="CriarQuery()"--}} >
+            <select id="unidade" onchange="dropEsp(this.value)" class="form-control">
                 <option value="">Faça sua busca</option>
                 @foreach($unidades as $unidade)
                     <option value="{{$unidade->unidade_saude}}">{{$unidade->unidade_saude}}</option>
@@ -39,12 +39,10 @@
 
     <div style = "width: 32%;font-size: 20px;">
         Especialização
+
         <div class="form-group" style="padding-left: 15px;padding-right: 15px;">
             <select id="especializacao" class="form-control" {{--onchange="CriarQuery()"--}} >
                 <option value="">Faça sua busca</option>
-                @foreach($especializacoes as $especializacao)
-                    <option value="{{$especializacao->ocupacao}}">{{$especializacao->ocupacao}}</option>
-                @endforeach
             </select>
         </div>
     </div>
@@ -111,6 +109,20 @@
             })
         });
     })
+
+
+    var dropEsp = function(unidade){
+        $('#especializacao').html("<option value=''>Selecione</option>");
+        $.ajax({
+            url:"/especializacoes/"+unidade,
+            success:function(data){
+                $.each(data,function(key,value){
+                    $('#especializacao').append("<option value='"+value.ocupacao+"'>"+value.ocupacao+"</option>");
+
+                });
+            }
+        });
+    }
 </script>
 
 {{-- <div style="width: 350px;">

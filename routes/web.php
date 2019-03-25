@@ -18,3 +18,5 @@
 Route::resource('/', 'ConsultaController');
 
 Route::get('refreshsematt/{unidade}/{especializacao}/{datai}/{dataf}', 'ConsultaController@refreshsematt');
+
+Route::get('especializacoes/{unidade}','ConsultaController@especializacao');

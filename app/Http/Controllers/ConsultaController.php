@@ -11,12 +11,20 @@ class ConsultaController extends Controller
   
     public function index()
     {
-        $especializacoes = DB::table('view_paciente_consultas')->select('ocupacao')->distinct()->get();
-        $unidades = DB::table('view_paciente_consultas')->select('unidade_saude')->distinct()->get();        
+        $unidades = DB::table('view_paciente_consultas')->select('unidade_saude')->distinct()->get();     
         //dd($consultas);
         return view('welcome', compact('especializacoes','unidades'));
     }
 
+    public function especializacao($unidade){
+        $especializacoes = DB::table('view_paciente_consultas')
+            ->select('ocupacao')
+                ->where('unidade_saude','=',$unidade)
+                    ->distinct()
+                        ->get();
+
+        return response($especializacoes);
+    }
  
     public function refreshsematt($unidade,$especializacao,$datai,$dataf)
     {
