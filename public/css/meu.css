@@ -1,0 +1,73 @@
+.navbar {
+	height: 80px;
+	box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 
+    0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    flex-wrap: initial;
+}
+
+#primeiradiv {
+	padding-top: 13px;
+	padding-right: 60px;
+}
+
+#img360 {
+    width: 81px;
+    float: right;
+}
+
+.body {
+    min-height:100%;
+    position:relative;
+    width:800px;
+}
+
+.footer {
+    text-align: center;
+    /* border: solid 1px Gray; */
+    font-size:8pt;
+    /* font-family: Verdana; */
+    font-weight:bold;
+    width:100%;
+    /* color:Black; */
+    position:fixed;
+    bottom:0px;
+    left:0px;
+	background: #BFA15F;
+}
+
+.rodape{
+    line-height: 0.9; 
+    text-align: center; 
+    font-size: 15px;
+    margin-top: 17px;
+    
+    }
+
+.content {
+    text-align: center;
+    padding-bottom: 43px;
+    }
+
+.form-control{
+    border: none;
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+.form-control:focus {
+    box-shadow: 0 1px 0 0 #26a69a;
+  }
+
+.caption, th{
+    text-align: center;
+}
