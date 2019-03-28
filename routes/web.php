@@ -11,12 +11,16 @@
 |
 */
 
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
 Route::resource('/', 'ConsultaController');
 
-Route::get('refreshsematt/{unidade}/{especializacao}/{datai}/{dataf}', 'ConsultaController@refreshsematt');
+Route::get('refreshsematt/{unidade}/{especializacao}/{datai}/{dataf}/{tipo_consulta}', 'ConsultaController@queryFull');
+Route::get('refreshsematt/{unidade}/{especializacao}/{datai}/{dataf}', 'ConsultaController@querySemiFull');
+Route::get('refreshsematt/{unidade}/{datai}/{dataf}', 'ConsultaController@querySimple');
 
 Route::get('especializacoes/{unidade}','ConsultaController@especializacao');
+Route::get('tipoconsulta/{unidade}','ConsultaController@tipoConsulta');
