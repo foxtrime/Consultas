@@ -12,7 +12,7 @@ class ConsultaController extends Controller
     {
         $unidades = DB::table('view_paciente_consultas')->select('unidade_saude')->distinct()->get();     
         //dd($consultas);
-        return view('welcome', compact('especializacoes','unidades'));
+        return view('welcome', compact('unidades'));
     }
 
     public function especializacao($unidade){

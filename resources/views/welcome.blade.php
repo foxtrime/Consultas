@@ -60,7 +60,7 @@
 </form>
 
     <div class="row">
-        <div style="padding-left: 50%;">
+        <div style="padding-left: 47%;">
             <button type="submit" class='btn btn-success' id="procurar">Buscar</button>
         </div>
     </div>
@@ -111,6 +111,7 @@
 
             if(e=="" && b=="")      var query = "http://consulta.test/refreshsematt/" +a+"/"+c+"/"+d;
             else if(e=="")          var query = "http://consulta.test/refreshsematt/" +a+"/"+b+"/"+c+"/"+d;
+            //console.log(query);
 
 
             $.ajax({
@@ -123,7 +124,7 @@
                     });
 
                     var teste1 = data;
-                    console.log(teste1);
+                    //console.log(teste1);
                     
 
                     if(teste1[0]==0 && teste1[1]==0){
