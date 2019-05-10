@@ -1,12 +1,22 @@
 @extends('layouts.material')
  
 @section('content')
-<div class="row" style="padding-top: 6%;">
 
+<div class="row" style="float: right;">
+    <ul class="nav navbar-nav">
+        <li>
+            <a href="{{ url('/logout') }}" style="color:black;">
+                <i class="fa fa-fw fa-power-off"></i>Sair
+            </a>
+        </li>
+    </ul>
 </div>
+<div class="row" style="padding-top: 6%;">
+    <ul class="nav navbar-nav" style="float: right;">
 
-
-<form style='text-align:center; '>
+    </ul>
+</div>
+<form style='text-align:center;'>
      
      <fieldset  style='text-align:center; min-width:300px;  display:inline-block; width:35%; vertical-align:top;'>  
         Data

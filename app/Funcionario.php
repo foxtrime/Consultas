@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Funcionario extends Authenticatable
 {
     protected $connection = "mysql2";
 
@@ -14,4 +14,5 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
 }
