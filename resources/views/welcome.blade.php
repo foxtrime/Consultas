@@ -117,10 +117,10 @@
 
 
 
-            var query = "http://consulta.test/refreshsematt/" +a+"/"+b+"/"+c+"/"+d+"/"+e;
+            var query = "{{ url ("/refreshsematt/") }}/" +a+"/"+b+"/"+c+"/"+d+"/"+e;
 
-            if(e=="" && b=="")      var query = "http://consulta.test/refreshsematt/" +a+"/"+c+"/"+d;
-            else if(e=="")          var query = "http://consulta.test/refreshsematt/" +a+"/"+b+"/"+c+"/"+d;
+            if(e=="" && b=="")      var query = "{{ url ("/refreshsematt/") }}/" +a+"/"+c+"/"+d;
+            else if(e=="")          var query = "{{ url ("/refreshsematt/") }}/" +a+"/"+b+"/"+c+"/"+d;
             //console.log(query);
 
 
@@ -188,7 +188,7 @@
         $('#especializacao').html("<option value=''>Todos</option>");
         $('#tipo_consulta').html("<option value=''>Selecione Especialização (opcional)</option>");
         $.ajax({
-            url:"/especializacoes/"+unidade,
+            url:"{{ url ("/especializacoes/") }}/"+unidade,
             success:function(data){
                 $.each(data,function(key,value){
                     $('#especializacao').append("<option value='"+value.ocupacao+"'>"+value.ocupacao+"</option>");
@@ -201,7 +201,7 @@
     var dropTipo = function(esp){
         $('#tipo_consulta').html("<option value=''>Todos</option>");
         $.ajax({
-            url:"/tipoconsulta/"+esp,
+            url:"{{ url ("/tipoconsulta/") }}/"+esp,
             success:function(data){
                 
                 $.each(data,function(key,value){
